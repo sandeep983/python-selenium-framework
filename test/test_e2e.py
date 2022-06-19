@@ -2,14 +2,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from utilities.BaseClass import BaseClass
-import pytest
 
-@pytest.mark.usefixtures("setup")
 class TestOne(BaseClass):
     def test_e2e(self):
         # we defined browser opening inside the 'setup method' in 'conftest.py'
         #  file we will use it with the help of fixture.
-
+        
         wait = WebDriverWait(self.browser, 10)
 
         #click shop button
