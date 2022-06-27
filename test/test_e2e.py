@@ -11,13 +11,9 @@ class TestOne(BaseClass):
 
         #passing browser/driver to homepage.py
         homePage = HomePage(self.browser)
-        #click shop button
-        homePage.getShopItems().click()
+        #click shop button and return and pass the browser/driver to CheckoutPage.py
+        checkOutPage = homePage.getShopItems()
         
-
-
-        #passing the browser/driver to checkoutpage.py
-        checkOutPage = CheckOutPage(self.browser)
 
         #getting all the products/cards in page
         products = checkOutPage.getCardTitles()
@@ -31,12 +27,10 @@ class TestOne(BaseClass):
         #click checkout button
         checkOutPage.getCheckoutButton().click()
         #checkout button of next page
-        checkOutPage.getCheckoutButtonNext().click()
-
-        
-
-        #passing the browser/driver to confirmpage.py
-        confirmPage = ConfirmPage(self.browser)
+        #click checkout button on next page and return and pass the browser/driver to
+        # ConfirmPage.py
+        confirmPage = checkOutPage.getCheckoutButtonNext()
+    
 
         #input box - entering "ind"
         confirmPage.getInputBox().send_keys('ind')

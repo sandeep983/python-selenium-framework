@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from pageObjects.ConfirmPage import ConfirmPage
 
 class CheckOutPage:
     #to receive the driver/browser from the test_e2e.py, we need to define the constructor
@@ -30,4 +31,8 @@ class CheckOutPage:
         return self.browser.find_element(*CheckOutPage.checkoutButton)
 
     def getCheckoutButtonNext(self):
-        return self.browser.find_element(*CheckOutPage.checkoutButtonNext)
+        self.browser.find_element(*CheckOutPage.checkoutButtonNext).click()
+        #passing the browser driver to ConfirmPage.py so we don't have to pass it from
+        # the test_e2e.py file
+        confirmPage = ConfirmPage(self.browser)
+        return confirmPage
