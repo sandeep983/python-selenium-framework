@@ -1,7 +1,5 @@
 from utilities.BaseClass import BaseClass
 from pageObjects.HomePage import HomePage
-from pageObjects.CheckoutPage import CheckOutPage
-from pageObjects.ConfirmPage import ConfirmPage
 
 class TestOne(BaseClass):
     def test_e2e(self):
@@ -34,10 +32,9 @@ class TestOne(BaseClass):
 
         #input box - entering "ind"
         confirmPage.getInputBox().send_keys('ind')
-        #wait till the link text India is present and then click on it
-        confirmPage.getWaitForInd()
-
-        #select india
+        #verify the link presence
+        self.verifyLinkPresence("India")
+        #select/click india
         confirmPage.getSelectInd().click()
 
         #click on t&c checkbox
@@ -48,7 +45,6 @@ class TestOne(BaseClass):
         #get the success msg printed on webpage verify it if it's matching
         success_text = confirmPage.getSuccessMsg().text
         assert "Success! Thank you!" in success_text
-
 
 
         #taking a screenshot of the page

@@ -1,6 +1,4 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 class ConfirmPage:
     #to receive the driver/browser from the test_e2e.py, we need to define the constructor
@@ -26,9 +24,6 @@ class ConfirmPage:
     def getInputBox(self):
         #that * tells it to take it as webelement, it deserializes it as tuple
         return self.browser.find_element(*ConfirmPage.inputBox)
-
-    def getWaitForInd(self):
-        return WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((self.selectInd)))
     
     def getSelectInd(self):
         return self.browser.find_element(*ConfirmPage.selectInd)
