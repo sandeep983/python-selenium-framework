@@ -36,24 +36,25 @@ class TestOne(BaseClass):
         checkOutPage.getCheckoutButtonNext().click()
 
         
-
         #passing the browser/driver to confirmpage.py
         confirmPage = ConfirmPage(self.browser)
         #input box - entering "ind"
         confirmPage.getInputBox().send_keys('ind')
-
-
         #wait till the link text India is present and then click on it
+        # wait.until(EC.presence_of_element_located((By.LINK_TEXT, "India")))
         wait.until(EC.presence_of_element_located((By.LINK_TEXT, "India")))
-        self.browser.find_element(By.LINK_TEXT, "India").click()
+        #select india
+        confirmPage.getSelectInd().click()
 
-        #click on t&c checkbox and then on purchase button
-        self.browser.find_element(By.XPATH, "//div[@class='checkbox checkbox-primary']").click()
-        self.browser.find_element(By.CSS_SELECTOR, "[type='submit']").click()
+        #click on t&c checkbox
+        confirmPage.getCheckBox().click()
+        #click on purchase button
+        confirmPage.getPurchaseButton().click()
 
         #get the success msg printed on webpage verify it if it's matching
-        success_text = self.browser.find_element(By.CLASS_NAME, "alert-success").text
+        success_text = confirmPage.getSuccessMsg().text
         assert "Success! Thank you!" in success_text
+
 
         #taking a screenshot of the page
         self.browser.get_screenshot_as_file('ss.png')
