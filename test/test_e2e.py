@@ -5,7 +5,9 @@ class TestOne(BaseClass):
     def test_e2e(self):
         '''We defined browser opening inside the 'setup method' in 'conftest.py'
             file we will use it with the help of fixture.'''
-        
+
+        #logger object
+        log = self.getLogger()
 
         #passing browser/driver to homepage.py
         homePage = HomePage(self.browser)
@@ -13,12 +15,16 @@ class TestOne(BaseClass):
         checkOutPage = homePage.getShopItems()
         
 
+        #logging into log file
+        log.info("getting all the card titles")
         #getting all the products/cards in page
         products = checkOutPage.getCardTitles()
         i = -1
         for product in products:
             i = i + 1
             productTitle = product.text
+            #printing title of the product in log file
+            log.info(productTitle)
             if (productTitle ==  'Blackberry'):
                 checkOutPage.getAddToCart()[i].click()   
 
@@ -28,8 +34,9 @@ class TestOne(BaseClass):
         #click checkout button on next page and return and pass the browser/driver to
         # ConfirmPage.py
         confirmPage = checkOutPage.getCheckoutButtonNext()
-    
 
+        #logging into log file
+        log.info("Entering country name as ind")
         #input box - entering "ind"
         confirmPage.getInputBox().send_keys('ind')
         #verify the link presence
@@ -44,6 +51,8 @@ class TestOne(BaseClass):
 
         #get the success msg printed on webpage verify it if it's matching
         success_text = confirmPage.getSuccessMsg().text
+        #logging the success msg into log file
+        log.info("Text received from application is: " + success_text)
         assert "Success! Thank you!" in success_text
 
 

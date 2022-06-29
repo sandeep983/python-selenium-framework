@@ -1,0 +1,41 @@
+2022-06-30 02:57:53,184 :INFO : test_e2e :getting all the card titles
+2022-06-30 02:57:53,237 :INFO : test_e2e :iphone X
+2022-06-30 02:57:53,259 :INFO : test_e2e :Samsung Note 8
+2022-06-30 02:57:53,277 :INFO : test_e2e :Nokia Edge
+2022-06-30 02:57:53,299 :INFO : test_e2e :Blackberry
+2022-06-30 02:57:53,674 :INFO : test_e2e :Entering country name as ind
+2022-06-30 02:57:59,666 :INFO : test_e2e :Text received from application is: ×
+Success! Thank you! Your order will be delivered in next few weeks :-).
+2022-06-30 03:02:19,089 :INFO : test_e2e :getting all the card titles
+2022-06-30 03:02:19,128 :INFO : test_e2e :iphone X
+2022-06-30 03:02:19,148 :INFO : test_e2e :Samsung Note 8
+2022-06-30 03:02:19,161 :INFO : test_e2e :Nokia Edge
+2022-06-30 03:02:19,178 :INFO : test_e2e :Blackberry
+2022-06-30 03:02:19,491 :INFO : test_e2e :Entering country name as ind
+2022-06-30 03:02:25,369 :INFO : test_e2e :Text received from application is: ×
+Success! Thank you! Your order will be delivered in next few weeks :-).
+2022-06-30 03:02:31,178 :INFO : test_homepageForm :Firstname: sandeep
+2022-06-30 03:02:32,176 :INFO : test_homepageForm :Firstname: sweety
+2022-06-30 03:02:32,176 :INFO : test_homepageForm :Firstname: sweety
+2022-06-30 03:59:16,327 :INFO : test_e2e :getting all the card titles
+2022-06-30 03:59:16,361 :INFO : test_e2e :iphone X
+2022-06-30 03:59:16,375 :INFO : test_e2e :Samsung Note 8
+2022-06-30 03:59:16,390 :INFO : test_e2e :Nokia Edge
+2022-06-30 03:59:16,401 :INFO : test_e2e :Blackberry
+2022-06-30 03:59:16,630 :INFO : test_e2e :Entering country name as ind
+2022-06-30 03:59:22,312 :INFO : test_e2e :Text received from application is: ×
+Success! Thank you! Your order will be delivered in next few weeks :-).
+2022-06-30 03:59:27,373 :INFO : test_homepageForm :Firstname: sandeep
+2022-06-30 03:59:28,149 :INFO : test_homepageForm :Firstname: sweety
+2022-06-30 03:59:28,149 :INFO : test_homepageForm :Firstname: sweety
+2022-06-30 04:11:26,252 :INFO : test_e2e :getting all the card titles
+2022-06-30 04:11:26,317 :INFO : test_e2e :iphone X
+2022-06-30 04:11:26,348 :INFO : test_e2e :Samsung Note 8
+2022-06-30 04:11:26,374 :INFO : test_e2e :Nokia Edge
+2022-06-30 04:11:26,395 :INFO : test_e2e :Blackberry
+2022-06-30 04:11:26,893 :INFO : test_e2e :Entering country name as ind
+2022-06-30 04:11:32,973 :INFO : test_e2e :Text received from application is: ×
+Success! Thank you! Your order will be delivered in next few weeks :-).
+2022-06-30 04:11:37,605 :INFO : test_homepageForm :Firstname: sandeep
+2022-06-30 04:11:38,387 :INFO : test_homepageForm :Firstname: sweety
+2022-06-30 04:11:38,387 :INFO : test_homepageForm :Firstname: sweety
